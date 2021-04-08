@@ -135,7 +135,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 azimuth = 180 * orientation[0] / Math.PI;
                 pitch = 180 * orientation[1] / Math.PI;
                 double roll = 180 * orientation[2] / Math.PI;
-//                Log.d("direction", String.valueOf(azimuth));
             }
         }
     }
