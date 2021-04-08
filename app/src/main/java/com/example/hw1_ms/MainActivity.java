@@ -32,22 +32,15 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public static float swAzimuth;
     public static double azimuth;
     public static double pitch;
-    int curBrightnessValue;
     private String name = "hagit";
     private String pass = "qaz12";
-//    Context context;
 
     public static SensorManager mSensorManager;
     public static Sensor accelerometer;
     public static Sensor magnetometer;
-    private  Sensor mLightSensor;
-    private static float mLightQuantity;
 
     public static float[] mAccelerometer = null;
     public static float[] mGeomagnetic = null;
-
-    public MainActivity() throws Settings.SettingNotFoundException {
-    }
 
 
     @Override
@@ -57,15 +50,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         accelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         magnetometer = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
-//        mLightSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-
-
 
         findViews();
         initViews();
 
 }
-
 
 
     private void findViews() {
@@ -80,8 +69,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
 
     private void initViews() {
-
-
 
         submit.setOnClickListener(new View.OnClickListener() {
 
